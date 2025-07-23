@@ -1,0 +1,19 @@
+@media (prefers-color-scheme: dark){
+    * *{
+        color: white;
+    }
+    .page{
+        background-color: #242424;
+    }
+    button{
+        background-color: #181818;
+        border: 2px solid #2e2e2e;
+    }
+    button:hover{
+        background-color: #3e3e3e;
+    }
+    input{
+        background-color: #3e3e3e;
+        border: 2px solid #2e2e2e;
+    }
+}
