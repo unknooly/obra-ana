@@ -30,7 +30,12 @@ document.getElementById("form").addEventListener("submit",function(e){
     // })
     console.log(data)
 
-    const res=document.getElementById("resultado")
-    console.log(res.style)
-    res.style="display: unset"
+    const result=document.getElementById("result")
+    result.style="display: unset"
+
+    const output=document.getElementById("output")
+    output.value=Object.values(data).reduce(
+        (ac,x) => !isNaN(Number(x)) ? ac+Number(x) : ac
+        ,0
+    )
 })
