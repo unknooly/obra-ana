@@ -1,0 +1,1 @@
+- <input type="checkbox" unchecked>Remover *magic number* da [script2](./script2.js) - quantidade de questões que precisam ser marcadas.
