@@ -28,10 +28,10 @@ document.getElementById("form").addEventListener("submit",function(e){
     //         result: Number(value)*0.8
     //     })
     // })
-    console.log(data)
+    // console.log(data)
 
     const result=document.getElementById("result")
-    result.style="display: unset"
+    result.style="display: unset;"
 
     const output=document.getElementById("output")
     output.value=Object.values(data).reduce(

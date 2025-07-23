@@ -13,16 +13,20 @@
     <div class="page">
         <h1>Lista de Questões</h1>
         <form id="form">
-            <label>Questão 1<br><input type="text" placeholder="Digite. . ." name="q1" required value="1"></label>
-            <label>Questão 2<br><input type="text" placeholder="Digite. . ." name="q2" required value="2"></label>
-
-            <button type="submit">Enviar</button>
-            <label id="result" style="display: none;" value="pending">
-                Resultado (soma): <output id="output"></output>
+            <ol>
+                <li><div for="q1">Questão 1<br><input type="text" placeholder="Digite. . ." name="q1" required value="1"></div></li>
+                <li><div for="q2">Questão 2<br><input type="text" placeholder="Digite. . ." name="q2" required value="2"></div></li>
+                <button type="submit">Enviar</button>
+                
+                <div id="result" style="display: none;" value="pending">Resultado (soma): <output id="output"></output>
                     <details><summary>questão 1...</summary><p>peso: 10</p></details>
                     <details><summary>questão 2...</summary><p>peso: 5</p></details>
-            </label>
+                </div>
+            </ol>
         </form>
+        <a href="./index2.html">
+            <div style="padding: 10px; margin: 10px; border: 2px solid gray; background-color: #3e3e3e; border-radius: 30px">Ver site 2</div>
+        </a>
     </div>
 </body>
 
