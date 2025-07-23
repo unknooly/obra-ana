@@ -1,1 +1,0 @@
-console.log(!isNaN(Number("56")))
