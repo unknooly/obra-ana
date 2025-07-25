@@ -1,7 +1,7 @@
 * *{
     margin: 0;
     padding: 0;
-    font-family: Arial;
+    font: 22px "Arial";
     border: 0;
     text-decoration: none;
 }
@@ -15,7 +15,7 @@ body{
     height: 90%;
     place-items: center;
     margin: 20px;
-    padding: 5px;
+    padding: 50px;
 }
 
 input,button,li{
@@ -34,11 +34,6 @@ h1{
     text-align: center;
 }
 
-button{
-    border-radius: 15px;
-    width: 75%;
-}
-
 label{
     margin: 10px;
     padding: 5px;
@@ -47,4 +42,25 @@ label{
 .strong{
     display: inline;
     color: greenyellow;
+}
+
+button{
+    border-radius: 15px;
+    width: 200px;
+    font-size: 20px;
+    padding: 15px 20px;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    place-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 35%;
+    width: 30%;
+}
+
+li{
+    display: none;
 }

@@ -11,17 +11,18 @@
 
 <body>
     <div class="page">
+        <footer>
+            <button id="anterior">-</button>
+            <button id="proxima">Próxima</button>
+        </footer>
+
         <form id="form">
-            <!-- <h1>Instruções</h1>
-            <ul>
-                <li>Avalie cada item com uma pontuação de 0 a 2, conforme os critérios.</li>
-                <li>0 pontos: característica ausente ou mal desenvolvida</li>
-                <li>1 ponto: característica presente de forma parcial ou inconsistente</li>
-                <li>2 pontos: característica presente de forma clara, rica e bem elaborada</li>
-            </ul> -->
-
-            <h1>Questões</h1>
-
+            <div id="questao0">
+                <h1>Página inicial</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean faucibus, turpis ac lobortis tempus, libero orci placerat nibh, in tempus purus purus non ligula. Ut pellentesque urna at volutpat volutpat. Morbi tincidunt gravida sapien a congue. Vivamus dictum, quam non malesuada cursus, tortor nisl ultrices lacus, id ultrices turpis justo vel odio. Donec laoreet venenatis dictum. Curabitur a consequat mi. Nunc nec fringilla lectus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <p>Aenean sit amet ligula in turpis tristique eleifend. Suspendisse faucibus nec nisi id vulputate. Nam faucibus libero elit, a volutpat nunc iaculis eget. Suspendisse tincidunt suscipit aliquam. Duis tincidunt augue quis dolor accumsan, sed accumsan magna dignissim. In non diam rhoncus velit posuere finibus et quis erat. Nullam vulputate posuere augue vel ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce consequat porta libero, ac dignissim ligula scelerisque eu. Ut iaculis vulputate sodales. Vivamus mollis neque at metus eleifend fringilla. Vestibulum in porta ante, vel bibendum augue.</p>
+            </div>
+            
             <ol id="questoes">
                 <li id="questao1">
                     <p>A obra utiliza linguagem criativa, poética ou figurada que estimula a imaginação da criança?</p>
@@ -97,7 +98,7 @@
             <button id="result" type="submit">Responder</button>
         </form>
 
-        <div id="result">Resultado: <output id="output"></output></div>
+        <div id="result" style="display: none;">Resultado: <output id="output"></output></div>
 
         <div style="display: none;" id="resposta1">
             <h1>Obra não literária</h1>
