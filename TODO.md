@@ -1,1 +1,1 @@
-- <input type="checkbox" unchecked>Remover *magic number* da [script2](./script2.js) - quantidade de questões que precisam ser marcadas.
+mostrar uma questão por vez: tentar EventListener em botões dentro do (fixed?)-footer que são modificados ao clicar e que mostram uma questão/li de ID específico (limitar com a `const qtdPerguntas` e criar uma variável que gerencia posição atual)

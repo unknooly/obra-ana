@@ -1,41 +1,26 @@
-// const q=new Array(10)
-
-// function formSend(){
-//     const p=q.filter(x=>x===null||x===undefined)
-//     console.log(p,typeof(p),p.length)
-//     console.log(`Form's been sent:`,q)
-// }
-
-// function handlechange(id){
-//     q[id-1]=document.getElementById(`q${id}`).value
-// }
+const response = (text,hideForm)=>{
+    document.getElementById("output").innerHTML=text
+    document.getElementById("result").style="display:unset;"
+    if(hideForm==="hideForm") document.getElementById("form").style="display:none;"
+}
 
 document.getElementById("form").addEventListener("submit",function(e){
     e.preventDefault()
+
+    const qtdPerguntas=document.getElementById("questoes").getElementsByTagName("li").length
     const formData=new FormData(this)
+    const data=[]
 
-    // COM OBJECT:
-    const data={}
-    formData.forEach((value,key)=>{
-        data[key]=value
-    })
+    formData.forEach((value,key) => data.push({key,value:Number(value)}))
 
-    // COM ARRAY:
-    // const data=[]
-    // formData.forEach((value,key)=>{
-    //     data.push({
-    //         value: Number(value),
-    //         result: Number(value)*0.8
-    //     })
-    // })
-    // console.log(data)
-
-    const result=document.getElementById("result")
-    result.style="display: unset;"
-
-    const output=document.getElementById("output")
-    output.value=Object.values(data).reduce(
-        (ac,x) => !isNaN(Number(x)) ? ac+Number(x) : ac
-        ,0
-    )
+    if(data.length<qtdPerguntas){ // valida qtd respostas
+        response(`pendente, pois ${data.length*100/qtdPerguntas}% das perguntas foram respondidas`,"keepForm")
+    } else{
+        const result=data.reduce((ac,x)=>ac+x.value,0)
+        response(`${result}<br>`+data.reduce((ac,x,i)=>ac+`${i+1}ª resposta: ${x.value}<br>`,""),"hideForm")
+        document.getElementById(`resposta${ // diferentes resultados
+            (result>-1&&result<8) ? 1 :
+            (result<15) ? 2 : 3
+        }`).style="display:unset;"
+    }
 })

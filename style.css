@@ -18,9 +18,11 @@ body{
     padding: 5px;
 }
 
-input,button{
+input,button,li{
     margin: 15px;
     padding: 5px;
+} li>p{
+    padding: 10px;
 }
 
 form{
@@ -29,6 +31,7 @@ form{
 
 h1{
     padding: 20px;
+    text-align: center;
 }
 
 button{
