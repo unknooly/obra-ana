@@ -1,1 +1,2 @@
-mostrar uma questão por vez: tentar EventListener em botões dentro do (fixed?)-footer que são modificados ao clicar e que mostram uma questão/li de ID específico (limitar com a `const qtdPerguntas` e criar uma variável que gerencia posição atual)
+arrumar li pois não aparece nº questão sem h1 manual
+padronizar posicionamento horizontal de li (width=100%, algo assim)

@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font: 22px "Arial";
-    border: 0;
     text-decoration: none;
 }
 
@@ -11,22 +10,23 @@ body{
 }
 
 .page{
-    width: 90%;
-    height: 90%;
+    width: 80vw;
+    min-height: 50vh;
+    display: grid;
     place-items: center;
-    margin: 20px;
-    padding: 50px;
+    margin-top: 10vh;
+    padding: 30px;
 }
 
 input,button,li{
     margin: 15px;
-    padding: 5px;
 } li>p{
     padding: 10px;
 }
 
 form{
     display: grid;
+    place-items: center;
 }
 
 h1{
@@ -39,28 +39,19 @@ label{
     padding: 5px;
 }
 
-.strong{
-    display: inline;
-    color: greenyellow;
-}
-
 button{
     border-radius: 15px;
-    width: 200px;
     font-size: 20px;
     padding: 15px 20px;
+    width: 200px;
 }
 
 footer{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    place-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 35%;
-    width: 30%;
+    display: grid; grid-template-columns: repeat(3,auto); place-content: center; position: relative; top: 50px;
+    /* position: fixed; bottom: 35vh; display: flex; place-content: center; */
+    width: 50%;
 }
 
-li{
+li,[id*="resposta"]{
     display: none;
 }
