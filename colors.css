@@ -12,11 +12,81 @@
     button:hover{
         background-color: #3e3e3e;
     }
-    input{
-        background-color: #3e3e3e;
-        border-color: #2e2e2e;
+    .header,h1,h2{
+        border-color: #3e3e3e !important;
     }
-    .header{
-        border-color: #3e3e3e;
+    h2{
+        box-shadow: 5px 5px 0 0 black;
+    }
+    label{
+        box-shadow: 10px 10px 0px 0px black;
+        border-color: #181818;
+    }
+    label:hover{
+        background-color: #3e3e3e !important; /* without important, label:checked below has priority */
+        box-shadow: 6px 6px 0px 0px black;
+    }
+    label:has(input:checked){
+        background-color: #3e3e3e;
+    }
+    li:not([id="questao0"]) h1
+    ,[id="questao0"] h1
+    ,[id*="resposta"] h1{
+        box-shadow: 8px 8px 0 0 black;
+    }
+    [id="questao0"]>p:not(:last-child){
+        border-bottom: 5px solid #3e3e3e;
+    }
+}
+
+@media (prefers-color-scheme: light){
+    * *{
+        color: black;
+    }
+    body{
+        background-color: #e5e7eb;
+    }
+    .page{
+        background-color: #ffffff;
+    }
+    button{
+        background-color: #e0f1a4;
+        border-color: #e5e7eb;
+    }
+    button:hover{
+        background-color: #a0bf39;
+        color: white;
+    }
+    .header,h1{
+        border-color: black !important;
+        background-color: #40e2a7;
+    }
+    h2{
+        border-color: black;
+        background-color: #78a574;
+        box-shadow: 5px 5px 0 0 black;
+        color: white;
+    }
+    label{
+        box-shadow: 10px 10px 0px 0px lightgray;
+        border-color: #181818;
+    }
+    label:hover{
+        box-shadow: 6px 6px 0px 0px lightgray;
+        /* without important, label:checked below has priority */
+        background-color: #72c1cf !important;
+        color: black !important
+    }
+    label:has(input:checked){
+        background-color: #008296;
+        color: white;
+    }
+    li:not([id="questao0"]) h1
+    ,[id="questao0"] h1
+    ,[id*="resposta"] h1{
+        box-shadow: 8px 8px 0 0 black;
+    }
+    [id="questao0"]>p:not(:last-child){
+        border-bottom: 5px solid lightgray;
     }
 }
