@@ -7,13 +7,16 @@
     }
     button{
         background-color: #181818;
-        border: 2px solid #2e2e2e;
+        border-color: #2e2e2e;
     }
     button:hover{
         background-color: #3e3e3e;
     }
     input{
         background-color: #3e3e3e;
-        border: 2px solid #2e2e2e;
+        border-color: #2e2e2e;
+    }
+    .header{
+        border-color: #3e3e3e;
     }
 }
