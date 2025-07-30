@@ -8,17 +8,22 @@
         --bg-button-hover: #3e3e3e;
         --bg-label-hover: #3e3e3e;
         --bg-label-checked: #3e3e3e;
-        --text: #ffffff;
-        --text-subtitle: #ffffff;
+        --bg-label-default: #181818;
+
+        --text-default: #9b9ca3;
+        --text-title: #ffffff;
+        --text-subtitle: #9b9ca3;
         --text-hover-label: #ffffff;
         --text-hover-button: #ffffff;
         --text-checked: #ffffff;
+
+        --border-default: #3e3e3e;
         --border-button: #2e2e2e;
-        --border: #3e3e3e;
-        --border2: #181818;
+        --border-label: #181818;
         --border-homepage: #3e3e3e;
-        --shadow: #000000;
-        --shadow-label: #000000;
+
+        --shadow-default: #000000;
+        --shadow-page: rgb(155, 156, 163, 50%);
     }
 }
 
@@ -26,34 +31,40 @@
     :root{
         --bg-body: #e5e7eb;
         --bg-page: #ffffff;
-        --bg-title: #40e2a7;
+        --bg-title: #41b888;
         --bg-subtitle: #78a574;
         --bg-button: #e0f1a4;
         --bg-button-hover: #a0bf39;
-        --bg-label-hover: #72c1cf;
-        --bg-label-checked: #008296;
-        --text: #000000;
+        --bg-label-hover: #e5e7eb;
+        --bg-label-checked: #d3d3d3;
+        --bg-label-default: #ffffff;
+
+        --text-default: #000000;
+        --text-title: #ffffff;
         --text-subtitle: #ffffff;
         --text-hover-label: #000000;
         --text-hover-button: #ffffff;
-        --text-checked: #ffffff;
+        --text-checked: #000000;
+
+        --border-default: #000000;
         --border-button: #e5e7eb;
-        --border: #000000;
-        --border2: #181818;
+        --border-label: #181818;
         --border-homepage: #d3d3d3;
-        --shadow: #000000;
-        --shadow-label: #d3d3d3;
+
+        --shadow-default: #000000;
+        --shadow-page: rgb(0, 0, 0, 25%);
     }
 }
 
 * *{
-    color: var(--text);
+    color: var(--text-default);
 }
 body{
     background-color: var(--bg-body);
 }
 .page{
     background-color: var(--bg-page);
+    box-shadow: 0 0 20px 1px var(--shadow-page);
 }
 button{
     background-color: var(--bg-button);
@@ -64,21 +75,23 @@ button:hover{
     color: var(--text-hover-button);
 }
 .header,h1{
-    border-color: var(--border) !important;
+    border-color: var(--border-default) !important;
     background-color: var(--bg-title);
+    color: var(--text-title);
 }
 h2{
-    box-shadow: 5px 5px 0 0 var(--shadow);
-    border-color: var(--border);
+    box-shadow: 5px 5px  0 var(--shadow-default);
+    border-color: var(--border-default);
     background-color: var(--bg-subtitle);
     color: var(--text-subtitle);
 }
 label{
-    box-shadow: 10px 10px 0px 0px var(--shadow-label);
-    border-color: var(--border2);
+    box-shadow: 10px 10px 0px 0px var(--shadow-default);
+    border-color: var(--border-label);
+    background-color: var(--bg-label-default);
 }
 label:hover{
-    box-shadow: 6px 6px 0px 0px var(--shadow-label);
+    box-shadow: 6px 6px 0px 0px var(--shadow-default);
     /* without important, label:checked below has priority */
     background-color: var(--bg-label-hover) !important;
     color: var(--text-hover-label) !important;
@@ -90,7 +103,7 @@ label:has(input:checked){
 li:not([id="questao0"]) h1
 ,[id="questao0"] h1
 ,[id*="resposta"] h1{
-    box-shadow: 8px 8px 0 0 var(--shadow);
+    box-shadow: 8px 8px 0 0 var(--shadow-default);
 }
 [id="questao0"]>p:not(:last-child){
     border-bottom: 5px solid var(--border-homepage);
