@@ -1,92 +1,97 @@
 @media (prefers-color-scheme: dark){
-    * *{
-        color: white;
-    }
-    .page{
-        background-color: #242424;
-    }
-    button{
-        background-color: #181818;
-        border-color: #2e2e2e;
-    }
-    button:hover{
-        background-color: #3e3e3e;
-    }
-    .header,h1,h2{
-        border-color: #3e3e3e !important;
-    }
-    h2{
-        box-shadow: 5px 5px 0 0 black;
-    }
-    label{
-        box-shadow: 10px 10px 0px 0px black;
-        border-color: #181818;
-    }
-    label:hover{
-        background-color: #3e3e3e !important; /* without important, label:checked below has priority */
-        box-shadow: 6px 6px 0px 0px black;
-    }
-    label:has(input:checked){
-        background-color: #3e3e3e;
-    }
-    li:not([id="questao0"]) h1
-    ,[id="questao0"] h1
-    ,[id*="resposta"] h1{
-        box-shadow: 8px 8px 0 0 black;
-    }
-    [id="questao0"]>p:not(:last-child){
-        border-bottom: 5px solid #3e3e3e;
+    :root{
+        --bg-body: #000000;
+        --bg-page: #242424;
+        --bg-title: #242424;
+        --bg-subtitle: #242424;
+        --bg-button: #181818;
+        --bg-button-hover: #3e3e3e;
+        --bg-label-hover: #3e3e3e;
+        --bg-label-checked: #3e3e3e;
+        --text: #ffffff;
+        --text-subtitle: #ffffff;
+        --text-hover-label: #ffffff;
+        --text-hover-button: #ffffff;
+        --text-checked: #ffffff;
+        --border-button: #2e2e2e;
+        --border: #3e3e3e;
+        --border2: #181818;
+        --border-homepage: #3e3e3e;
+        --shadow: #000000;
+        --shadow-label: #000000;
     }
 }
 
 @media (prefers-color-scheme: light){
-    * *{
-        color: black;
+    :root{
+        --bg-body: #e5e7eb;
+        --bg-page: #ffffff;
+        --bg-title: #40e2a7;
+        --bg-subtitle: #78a574;
+        --bg-button: #e0f1a4;
+        --bg-button-hover: #a0bf39;
+        --bg-label-hover: #72c1cf;
+        --bg-label-checked: #008296;
+        --text: #000000;
+        --text-subtitle: #ffffff;
+        --text-hover-label: #000000;
+        --text-hover-button: #ffffff;
+        --text-checked: #ffffff;
+        --border-button: #e5e7eb;
+        --border: #000000;
+        --border2: #181818;
+        --border-homepage: #d3d3d3;
+        --shadow: #000000;
+        --shadow-label: #d3d3d3;
     }
-    body{
-        background-color: #e5e7eb;
-    }
-    .page{
-        background-color: #ffffff;
-    }
-    button{
-        background-color: #e0f1a4;
-        border-color: #e5e7eb;
-    }
-    button:hover{
-        background-color: #a0bf39;
-        color: white;
-    }
-    .header,h1{
-        border-color: black !important;
-        background-color: #40e2a7;
-    }
-    h2{
-        border-color: black;
-        background-color: #78a574;
-        box-shadow: 5px 5px 0 0 black;
-        color: white;
-    }
-    label{
-        box-shadow: 10px 10px 0px 0px lightgray;
-        border-color: #181818;
-    }
-    label:hover{
-        box-shadow: 6px 6px 0px 0px lightgray;
-        /* without important, label:checked below has priority */
-        background-color: #72c1cf !important;
-        color: black !important
-    }
-    label:has(input:checked){
-        background-color: #008296;
-        color: white;
-    }
-    li:not([id="questao0"]) h1
-    ,[id="questao0"] h1
-    ,[id*="resposta"] h1{
-        box-shadow: 8px 8px 0 0 black;
-    }
-    [id="questao0"]>p:not(:last-child){
-        border-bottom: 5px solid lightgray;
-    }
+}
+
+* *{
+    color: var(--text);
+}
+body{
+    background-color: var(--bg-body);
+}
+.page{
+    background-color: var(--bg-page);
+}
+button{
+    background-color: var(--bg-button);
+    border-color: var(--border-button);
+}
+button:hover{
+    background-color: var(--bg-button-hover);
+    color: var(--text-hover-button);
+}
+.header,h1{
+    border-color: var(--border) !important;
+    background-color: var(--bg-title);
+}
+h2{
+    box-shadow: 5px 5px 0 0 var(--shadow);
+    border-color: var(--border);
+    background-color: var(--bg-subtitle);
+    color: var(--text-subtitle);
+}
+label{
+    box-shadow: 10px 10px 0px 0px var(--shadow-label);
+    border-color: var(--border2);
+}
+label:hover{
+    box-shadow: 6px 6px 0px 0px var(--shadow-label);
+    /* without important, label:checked below has priority */
+    background-color: var(--bg-label-hover) !important;
+    color: var(--text-hover-label) !important;
+}
+label:has(input:checked){
+    background-color: var(--bg-label-checked);
+    color: var(--text-checked);
+}
+li:not([id="questao0"]) h1
+,[id="questao0"] h1
+,[id*="resposta"] h1{
+    box-shadow: 8px 8px 0 0 var(--shadow);
+}
+[id="questao0"]>p:not(:last-child){
+    border-bottom: 5px solid var(--border-homepage);
 }
