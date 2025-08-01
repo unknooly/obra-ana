@@ -9,6 +9,8 @@
         --bg-label-hover: #3e3e3e;
         --bg-label-checked: #3e3e3e;
         --bg-label-default: #181818;
+        --bg-send-button: #000000;
+        --bg-send-button-hover: #9b9ca3;
 
         --text-default: #9b9ca3;
         --text-title: #ffffff;
@@ -24,6 +26,9 @@
 
         --shadow-default: #000000;
         --shadow-page: rgb(155, 156, 163, 50%);
+
+        --svg-nav: #9b9ca3;
+        --svg-send: #181818;
     }
 }
 
@@ -33,17 +38,19 @@
         --bg-page: #ffffff;
         --bg-title: #41b888;
         --bg-subtitle: #78a574;
-        --bg-button: #e0f1a4;
-        --bg-button-hover: #a0bf39;
-        --bg-label-hover: #e5e7eb;
+        --bg-button: #ffffff;
+        --bg-button-hover: #d3d3d3;
+        --bg-label-hover: #d3d3d3;
         --bg-label-checked: #d3d3d3;
         --bg-label-default: #ffffff;
+        --bg-send-button: #78a574;
+        --bg-send-button-hover: #000000;
 
         --text-default: #000000;
         --text-title: #ffffff;
         --text-subtitle: #ffffff;
         --text-hover-label: #000000;
-        --text-hover-button: #ffffff;
+        --text-hover-button: #000000;
         --text-checked: #000000;
 
         --border-default: #000000;
@@ -53,6 +60,9 @@
 
         --shadow-default: #000000;
         --shadow-page: rgb(0, 0, 0, 25%);
+
+        --svg-nav: #000000;
+        --svg-send: #ffffff;
     }
 }
 
@@ -80,18 +90,18 @@ button:hover{
     color: var(--text-title);
 }
 h2{
-    box-shadow: 5px 5px  0 var(--shadow-default);
+    box-shadow: 5px 5px 0 var(--shadow-default);
     border-color: var(--border-default);
     background-color: var(--bg-subtitle);
     color: var(--text-subtitle);
 }
 label{
-    box-shadow: 10px 10px 0px 0px var(--shadow-default);
+    box-shadow: 8px 8px 0px 0px var(--shadow-default);
     border-color: var(--border-label);
     background-color: var(--bg-label-default);
 }
 label:hover{
-    box-shadow: 6px 6px 0px 0px var(--shadow-default);
+    box-shadow: 4px 4px 0px 0px var(--shadow-default);
     /* without important, label:checked below has priority */
     background-color: var(--bg-label-hover) !important;
     color: var(--text-hover-label) !important;
@@ -100,11 +110,23 @@ label:has(input:checked){
     background-color: var(--bg-label-checked);
     color: var(--text-checked);
 }
-li:not([id="questao0"]) h1
+#questoes>div>h1
 ,[id="questao0"] h1
 ,[id*="resposta"] h1{
     box-shadow: 8px 8px 0 0 var(--shadow-default);
 }
 [id="questao0"]>p:not(:last-child){
     border-bottom: 5px solid var(--border-homepage);
+}
+
+svg{
+    fill: var(--svg-nav);
+}
+
+#result{
+    box-shadow: 0 0 10px 1px var(--shadow-page);
+} #result:hover{
+    background-color: var(--bg-send-button-hover);
+} #result:hover>svg{
+    fill: var(--svg-send);
 }

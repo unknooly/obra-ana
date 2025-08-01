@@ -1,6 +1,8 @@
-const nQuestions=document.getElementById("questoes").getElementsByTagName("li").length
+const nQuestions=document.getElementById("questoes").getElementsByTagName("div").length
 
 var currentQuestion=0
+
+const submitSVG=''
 
 const toggleElement = (id,show)=>{
     const el=document.getElementById(id)
@@ -15,8 +17,10 @@ const changeInner = (id,text)=>{
 document.getElementById("anterior").addEventListener("click",function(e){
     e.preventDefault()
     if(currentQuestion>0){
-        if(currentQuestion===1) changeInner("anterior","-")
-        if(currentQuestion===nQuestions) changeInner("proxima","Próxima")
+        if(currentQuestion===nQuestions){
+            toggleElement("result",false)
+            toggleElement("proxima",true)
+        }
         toggleElement(`questao${currentQuestion}`,false)
         toggleElement(`questao${currentQuestion-1}`,true)
         currentQuestion-=1
@@ -26,8 +30,10 @@ document.getElementById("anterior").addEventListener("click",function(e){
 document.getElementById("proxima").addEventListener("click",function(e){
     e.preventDefault()
     if(currentQuestion<nQuestions){
-        if(currentQuestion===nQuestions-1) changeInner("proxima","-")
-        if(currentQuestion===0) changeInner("anterior","Anterior")
+        if(currentQuestion===nQuestions-1){
+            toggleElement("proxima",false)
+            toggleElement("result",true)
+        }
         toggleElement(`questao${currentQuestion}`,false)
         toggleElement(`questao${currentQuestion+1}`,true)
         currentQuestion+=1
