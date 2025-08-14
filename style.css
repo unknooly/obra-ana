@@ -7,11 +7,16 @@
 
 body{
     place-items: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 .page{
     width: 80vw;
-    min-height: 50vh;
+    /* min-height: 50vh; */
     margin-top: 50px;
     padding: 30px;
     border-radius: 50px;
@@ -100,7 +105,6 @@ h2{
 
 b{
     font-weight: bold;
-    color: blue;
 }
 
 /* horizontal alignment for the questions */

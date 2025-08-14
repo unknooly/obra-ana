@@ -18,6 +18,7 @@
         --text-hover-label: #ffffff;
         --text-hover-button: #ffffff;
         --text-checked: #ffffff;
+        --text-bold:  beige;
 
         --border-default: #3e3e3e;
         --border-button: #2e2e2e;
@@ -52,6 +53,7 @@
         --text-hover-label: #000000;
         --text-hover-button: #000000;
         --text-checked: #000000;
+        --text-bold: blue;
 
         --border-default: #000000;
         --border-button: #000000;
@@ -129,4 +131,8 @@ svg{
     background-color: var(--bg-send-button-hover);
 } #result:hover>svg{
     fill: var(--svg-send);
+}
+
+b{
+    color: var(--text-bold);
 }

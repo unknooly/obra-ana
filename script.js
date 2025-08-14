@@ -1,8 +1,10 @@
+// background
+const image=Math.round(Math.random()*9+1)
+document.getElementById("body").style=`background-image: url(./assets/image-${image}.jpg);`
+
 const nQuestions=document.getElementById("questoes").getElementsByTagName("div").length
 
 var currentQuestion=0
-
-const submitSVG=''
 
 const toggleElement = (id,show)=>{
     const el=document.getElementById(id)
